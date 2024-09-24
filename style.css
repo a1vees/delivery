@@ -1,0 +1,347 @@
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #efedeb;
+}
+
+hr {
+    border: none;
+    height: 2px; /* Espessura mais fina da linha */
+    background: linear-gradient(to bottom, rgb(180, 169, 115), rgba(180, 169, 115, 0.1)); /* Gradiente de cima para baixo */
+    margin: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Efeito de profundidade sutil */
+}
+
+nav {
+    background-color: rgba(180, 169, 115, 0.1); /* Cor de fundo clara e sutil que combina com a cor do título */
+    padding: 10px 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 1;
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li a {
+    font-family: "Lexend", sans-serif;
+    color: rgb(180, 169, 115);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+    position: relative; /* Adiciona posição relativa para o pseudo-elemento */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px; /* Linha mais fina */
+    background-color: rgb(180, 169, 115);
+    box-shadow: 0 0 8px rgba(180, 169, 115, 0.7), 0 0 15px rgba(180, 169, 115, 0.5); /* Efeito de luz */
+    transition: width 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o sublinhado e efeito de luz */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Faz a linha ocupar toda a largura do elemento ao passar o mouse */
+    box-shadow: 0 0 15px rgba(180, 169, 115, 1), 0 0 30px rgba(180, 169, 115, 0.7); /* Efeito de brilho mais intenso ao passar o mouse */
+}
+
+nav ul li a:hover {
+    color: #78818e;
+}
+
+li .joiasbtn {
+    font-family: "Lexend", sans-serif;
+    color: rgb(180, 169, 115);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 10px;
+    display: block;
+}
+
+.joiasbtn:hover {
+    color: #78818e;
+    padding: -10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    min-width: 200px;
+}
+
+.dropdown-content a {
+    color: rgb(180, 169, 115);
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: "Lexend", sans-serif;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.h1 {
+    background-color: rgb(180, 169, 115);
+    color: #1e1e1e;
+    padding: 30px 0; /* Aumenta o padding superior e inferior */
+    margin: 0; /* Remove qualquer margem ao redor */
+    width: 100%; /* Faz com que o título ocupe toda a largura da tela */
+    text-align: center; /* Centraliza o texto */
+    font-size: 3rem; /* Tamanho de fonte maior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adiciona sombreamento ao texto */
+    border-radius: 0; /* Remove bordas arredondadas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor do título */
+    font-family: 'Playfair Display', serif; /* Aplica a nova fonte delicada */
+    font-weight: 700; /* Aplica um peso de fonte mais forte para maior impacto */
+}
+
+
+main {
+    width: 100%;
+    margin: 0 auto;
+   
+}
+
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.card {
+    width: 300px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação suave para flutuação */
+}
+.card:hover {
+    transform: translateY(-10px); /* Eleva o card para dar o efeito de flutuação */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Aumenta a sombra para dar a impressão de profundidade */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 20px 0;
+    color: #333;
+}
+
+.card p {
+    color: #777;
+}
+
+.card .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(180, 169, 115);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+    background-color: #333;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    margin-bottom: 15px;
+    color: rgb(180, 169, 115);
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: rgb(180, 169, 115);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #78818e;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.photo-gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100vw; /* Ocupa toda a largura da janela de visualização */
+    position: relative;
+    margin: 0; /* Remove a margem para que o slideshow vá até a borda */
+  }
+ 
+  .slideshow-container img {
+    width: 100%; /* As imagens vão ocupar toda a largura do slideshow */
+    height: auto; /* Mantém a proporção original das imagens */
+  }
+ 
+  /* Ocultar as imagens por padrão */
+  .mySlides {
+    display: none;
+  }
+ 
+  /* Remover as bordas padrão das imagens */
+  .mySlides img {
+    border: none;
+  }
+ 
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0); /* Fundo semi-transparente */
+  }
+ 
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+ 
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+ 
+  /* Alterar os dots para linhas */
+  .dot {
+    cursor: pointer;
+    height: 10px; /* Altura da linha */
+    width: 40px; /* Largura da linha */
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 5px; /* Deixa a linha levemente arredondada */
+    display: inline-block;
+    transition: background-color 0.6s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Profundidade com sombra */
+  }
+ 
+  .active, .dot:hover {
+    background-color: #717171;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5); /* Mais profundidade ao hover */
+  }
+ 
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+ 
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Remove o scroll horizontal, caso necessário */
+  }
